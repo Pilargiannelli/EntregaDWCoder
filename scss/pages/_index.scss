@@ -1,0 +1,52 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+
+.imagen-index-fondo {
+    @include tamanos('../img/home_img_tem.jpg');
+    height: map.get($tamheight, height-index-fondo);
+    @include display(flex, center, center);
+
+
+    .rec-index-opacidad {
+        background-color: rgba(128, 96, 68, 0.5);
+        @include wid-heig(690px, 230px);
+        @include display(flex, center, center);
+        h1 {
+            color: rgba(255, 255, 255, 0.79);
+            font-size: map.get($fontsize, font-h1-index);
+            text-align: center;
+            font-family: $font-family-newsreader;
+            font-weight: bold;
+        }
+    }
+}
+
+.recmarron {
+    min-height: map.get($tamheight, height-rec-marron);
+    background: $color-picasso-index;
+    @include display(flex, center, center);
+    p {
+        text-align: center;
+        color: rgba(237, 225, 210, 0.79);
+        font-size: map.get($fontsize, font-picasso-index);
+    }
+}
+
+.disenandoparavos {
+    @include tamanos('../img/home_imagen2.jpg');
+    min-height: map.get($tamheight, height-disen-index);
+    display: flex;
+
+    .rec-transparente {
+        @include wid-heig(95%, 300px);
+        @include display(flex, end, end);
+        h3 {
+            font-size: map.get($fontsize, font-h3-index);
+            font-weight: 400;
+            font-family: $font-family-newsreader;
+        }
+    }
+    
+}

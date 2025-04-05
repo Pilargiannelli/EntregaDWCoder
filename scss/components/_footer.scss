@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../utilities/extend' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+.footer {
+    background-color: $color-footer;
+    @include wid-heig(100%, 110px);
+    bottom: 0;
+    padding: 30px;
+    position: absolute;
+    
+    .icon-mail {
+        color: #EDE1D2;
+        &:hover {
+            color: $color-hover-footer;
+        }
+    }
+    
+    .icon-textmail {
+        color: $color-brands;
+        text-decoration: none;
+        font-family: $font-family-inter;
+        font-size: map.get($fontsize, font-email-foot);
+        &:hover {
+            color: $color-hover-footer;
+        }
+    }
+    
+    .footer-title {
+        color: $color-brands;
+        font-size: map.get($fontsize, font-title-foot);
+        font-weight: 400;
+        font-family: $font-family-newsreader;
+        text-align: center;
+    }
+    
+    .fa-brands {
+        color: $color-brands;
+        &:hover {
+            color: $color-hover-footer;
+        }
+    }
+
+}

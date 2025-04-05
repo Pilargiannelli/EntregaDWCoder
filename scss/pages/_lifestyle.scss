@@ -1,0 +1,84 @@
+@use '../utilities/extend' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+
+/*pages Lifestyle*/
+.img-espacios {
+    @include tamanos('../img/lifestyle_espacios.jpg');
+    min-height: $tamano-imgg-lifestyle;
+    position: relative;
+}
+
+.img-muebles {
+    @include tamanos('../img/lifestyle_mueble.png');
+    min-height: $tamano-imgg-lifestyle;
+    position: relative;
+}
+
+.img-cocina {
+    @include tamanos('../img/lifestyle_cocina.png');
+    min-height: $tamano-imgc-lifestyle;
+    position: relative;
+}
+
+.img-color {
+    @include tamanos('../img/lifestyle_color.png');
+    min-height: $tamano-imgc-lifestyle;
+    position: relative;
+}
+
+.img-verde {
+    @include tamanos('../img/lifestyle_verde.jpg');
+    min-height: $tamano-imgc-lifestyle;
+    position: relative;
+}
+
+.img-exterior {
+    @include tamanos('../img/lifestyle_exteriores.png');
+    min-height: $tamano-imgc-lifestyle;
+    position: relative;
+}
+
+.img-aqua {
+    @include tamanos('../img/lifestyle_aqua.png');
+    min-height: $tamano-imgg-lifestyle;
+    position: relative;
+}
+
+.img-descanso {
+    @include tamanos('../img/lifestyle_relax.png');
+    min-height: $tamano-imgg-lifestyle;
+    position: relative;
+}
+
+.recg-marron {
+    position: absolute;
+    bottom: 0;
+    @include wid-heig(100%, 145px);
+    background-color: $color-rec-lif;
+    color: $color-letra-lif
+}
+
+.recp-marron {
+    position: absolute;
+    bottom: 0;
+    @include wid-heig(100%, 85px);
+    background-color: $color-rec-lif;
+    color: $color-letra-lif;
+}
+
+.categoriag {
+    @include font-mt-ml(24px, 30px, 30px);
+}
+
+.titulog {
+    @include font-mt-ml(40px, 30px, 30px);
+}
+
+.categoriac {
+    @include font-mt-ml(14px, 30px, 25px);
+}
+
+.tituloc {
+    @include font-mt-ml(28px, 30px, 25px);
+} 

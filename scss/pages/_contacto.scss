@@ -1,0 +1,94 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+/*pages contacto*/
+
+.parte1 {
+    @include display(flex, center, space-between);
+    gap: 20px;
+
+    .imagenes {
+        display: flex;
+        flex: 1;
+        .imag1 {
+            @include tamanos('./img/contacto_1.png');
+            background-image: url(../img/contacto_1.png);
+            @include wid-heig(50%, 300px);
+        }
+        .imag2 {
+            @include tamanos('../img/contacto_2.png');
+            background-image: url(../img/contacto_2.png);
+            @include wid-heig(50%, 300px);
+        }
+    }
+    p {
+        flex: 1;
+        font-size: map.get($fontsize, font-p-cont);
+        font-family: $font-family-newsreader;
+    }
+}
+
+.contactarnos {
+    @include tamanos('../img/fondo_formulario.png');
+    @include wid-heig(100%, 800px);
+    margin: 0;
+
+    .formulario {
+        background-color: rgba(72, 39, 11, 0.96);
+        padding: 20px;
+        @include wid-heig(800px, 600px);
+        color: #EDE1D2;
+        border-radius: 5px;
+
+        .rec-contactanos {
+            background-color: rgba(131, 106, 85, 0.88);
+            min-height: map.get($tamheight, height-rec-contactarnos);
+            max-width: 320px;
+            text-align: center;
+            h2 {
+                font-size: map.get($fontsize, font-h2-cont);
+                font-family: $font-family-aboreto;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+
+        .form-control {
+            background-color: rgba(72, 39, 11, 0.96);
+            padding: 15px 10px;
+            border-width: 2px;
+            color: #EDE1D2;
+            &::placeholder {
+                font-size: map.get($fontsize, font-placeholder-cont);
+                font-family: $font-family-inter;
+                color: #FFFFFF;
+            }
+        }
+    
+        .button-cont {
+            padding: 15px 130px;
+            border-radius: 45px;
+            background-color: rgba(217, 217, 217, 1);
+            font-family: $font-family-inter;
+            font-size: map.get($fontsize, font-button-cont);
+            color: $color-footer;
+        }
+    }
+}
+
+.img-cont1 {
+    background-image: url(../img/contacto_3.png);
+    min-height: map.get($tamheight, height-img-finales);
+}
+
+.img-cont2 {
+    background-image: url(../img/contacto_4.png);
+    min-height: map.get($tamheight, height-img-finales);
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+

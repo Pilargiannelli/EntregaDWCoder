@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../utilities/extend' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+
+/*pages Arq&Deco*/
+.img-arq1 {
+    background-image: url(../img/arqdeco_1.jpg);
+    @include wid-heig(100%, 880px);
+    @extend.arq-item;
+}
+
+.contenedora-div1 {
+    h2 {
+        font-size: map.get($fontsize, font-h2neuro-arq);
+        margin-bottom: 20px;
+        font-family: $font-family-inter;
+        font-weight: bold;
+        padding: 5px;
+    }
+    
+    .img-arq2 {
+        background-image: url(../img/arqdeco_2.jpg);
+        @include wid-heig(50%, 400px);
+        @extend.arq-item;
+    }
+
+    .img-arq3 {
+        background-image: url(../img/arqdeco_3.jpg);
+        min-height: map.get($tamheight, height-img-arq3);
+        margin-top: 10px;
+        @extend.arq-item;
+    }
+}
+
+.neuroarq {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    font-size: map.get($fontsize, font-h2neuro-arq);
+    font-family: $font-family-newsreader;
+}
+
+
+.img-arq4 {
+    background-image: url(../img/arqdeco_4.jpg);
+    @include wid-heig(500px, 330px);
+    margin-bottom: 80px;
+    @extend.arq-item;
+    
+    .button-arq {
+        background-color: rgba(0, 0, 0, 0.53);
+        border-radius: 10px;
+        @include wid-heig(210px, 52px);
+        p {
+            color: rgba(255, 255, 255, 0.79);
+            font-size: map.get($fontsize, font-button-arq);
+        }
+    }
+}
+
+
+
+.div2 {
+    font-family: $font-family-inter;
+    h3 {
+        font-weight: bold;
+        font-size: map.get($fontsize, font-h3-arq);
+    }
+    p {
+        font-size: map.get($fontsize, font-p-arq);
+    }
+}
+

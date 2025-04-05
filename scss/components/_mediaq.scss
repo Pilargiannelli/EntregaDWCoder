@@ -1,0 +1,223 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+@use '../utilities/extend' as *;
+/*media queries para adaptarlo a dispositivos móviles*/
+@media (max-width: 992px){
+
+    body {
+        min-height: $heightbody-mobile;
+    }
+
+    .header {
+        min-height: $mheight-header;
+        .navbar-brand {
+            font-size: map.get($fontsizemobile, fs-navbar-brand);
+            margin-left: 16px;
+        }
+        .navbar-nav {
+            padding: 16px;
+            .nav-link {
+                font-size: map.get($fontsizemobile, fs-nav-link);
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .icon-mail {
+        font-size: map.get($fontsizemobile, fs-icon-mail);
+    }
+
+    .icon-textmail {
+        display: none;
+    }
+    
+    .footer-title {
+        font-size: map.get($fontsizemobile, fs-foot-title);
+    }
+    
+    .fa-brands {
+        font-size: map.get($fontsizemobile, fs-fa-brands);
+    }
+    
+    .parte1 p {
+        font-size: map.get($fontsizemobile, fs-p1p);
+    }
+
+    .contactarnos {
+        min-height: $mheight-contactarnos-mobile;
+        .formulario {
+            @include wid-heig(90%, 270px);
+            .rec-contactanos {
+                min-height: 26px;
+                max-width: 160px;
+                margin-bottom: 12px;
+                h2 {
+                    font-size: map.get($fontsizemobile, fs-conth2);
+                }
+            }
+            .form-control {
+                &::placeholder {
+                font-size: map.get($fontsizemobile, fs-placehold);
+                }
+            }
+            .button-cont {
+                padding: 8px 20px;
+                font-size: map.get($fontsizemobile, fs-buttoncont);
+            }
+        }
+    }
+
+    .img-cont1{
+        background-image: url(../img/contacto_1.png);
+        width: 100%;
+    }
+    
+
+    .imagen-index-fondo {
+        height: 600px;
+        padding-top: 70px;
+        align-items: start;
+        justify-content: center;
+        .rec-index-opacidad {
+            @include wid-heig(450px, 170px);
+            h1 {
+                font-size: map.get($fontsizemobile, fs-indexh1);
+            }
+        }
+    }
+
+    .recmarron {
+        height: 200px;
+        p {
+            font-size: map.get($fontsizemobile, fs-indexmarron);
+        }
+    }
+
+    .disenandoparavos {
+        min-height: 260px;
+        .rec-transparente {
+            height: 200px;
+            h3 {
+                font-size: map.get($fontsizemobile, fs-indexh3);
+            }
+        }
+    }
+
+    .mobileabt-section {
+        display: flex;
+    }
+
+    .imgabt {
+        @include wid-heig(25%, 350px);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .img-abt1 {
+        min-height: 700px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .img-abt3 {
+        width: 100%;
+    }
+
+    .text-section {
+        background-color: rgba(217, 217, 217, 0.43);
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 20px;
+        h2 {
+            margin-left: 40px;
+            font-size: map.get($fontsizemobile, fs-abth2);
+            font-family: $font-family-newsreader;
+        }
+    }
+
+    .linea-vertical {
+        border-left: 2px solid black;
+        min-height: 320px;
+        position: absolute;
+        left: 90%;
+    }
+
+    .arq-item {
+        h2 {
+            font-size: map.get($fontsizemobile, fs-arqitemh2);
+        }
+    }
+
+    .neuroarq {
+        font-size: map.get($fontsizemobile, fs-neuroarq);
+    }
+
+    .div2 {
+        margin-bottom: 100px;
+        h3 {
+            font-weight: bold;
+            font-size: map.get($fontsizemobile, fs-arqh3);
+        }
+        p {
+            font-size: map.get($fontsizemobile, fs-arqp);
+        }
+    }
+
+
+    .button-arq {
+        background-color: rgba(0, 0, 0, 0.53);
+        border-radius: 10px;
+        @include wid-heig(210px, 52px);
+        p {
+            color: $color-letra-lif;
+            font-size: map.get($fontsizemobile, fs-arqbuttonp);
+        }
+    }
+
+    @each $class, $height in $height-lifestyle-mob {
+        .#{$class}{
+            min-height: $height;
+        }
+    }
+
+    .categoriag {
+        @include font-mt-ml(10px, 5px, 5px);
+    }
+
+    .titulog {
+        @include font-mt-ml(16px, 5px, 5px);
+    }
+
+    .categoriac {
+        @include font-mt-ml(8px, 5px, 5px);
+    }
+
+    .tituloc {
+        @include font-mt-ml(14px, 5px, 5px);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-title {
+        font-size: map.get($fontsizemobile, fs-mini-foottitle);
+    }
+
+    .icon-textmail {
+        display: none;
+    }
+
+    .icon-mail {
+        font-size: map.get($fontsizemobile, fs-mini-icon);
+    }
+
+    .fa-brands {
+        font-size: map.get($fontsizemobile, fs-mini-brand);
+    }
+}
+
+

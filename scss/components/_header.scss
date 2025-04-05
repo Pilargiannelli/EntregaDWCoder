@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../base/variables' as *;
+@use '../utilities/mixins' as *;
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;   
+    .navbar {
+        @include wid-heig(100%, 110px);
+        background-color: $color-body;
+        font-family: $font-family-newsreader;
+        position: relative;
+        .navbar-brand {
+            font-size: map.get($fontsize, font-title-header);
+            color: black;
+            font-weight: 400;
+            margin-left: 54px;           
+            .navbar-toggler {
+                border: none;
+                box-shadow: none;
+                transition: background-color 0.7s, border-radius 0.4s; /*transicion de color y borde*/
+                outline: none;
+                &:hover {
+                    border-radius: 20px;
+                    background-color: rgba(250, 235, 215, 0.95);
+                }
+            }
+        }
+        .navbar-nav {
+            /*ul*/
+            margin-right: 50px;            
+            .nav-item {
+                list-style: none;                
+                .nav-link {
+                    font-family: $font-family-newsreader;
+                    text-decoration: none;
+                    font-size: map.get($fontsize, font-items-header);
+                    color: black;
+                    transition: background-color 0.7s, border-radius 0.4s; /*transicion de color y borde*/
+                    &:hover {
+                        background-color:rgba(250, 235, 215, 0.95);
+                        border-radius: 20px;
+                    }
+                }   
+            }
+        } 
+    }
+    .navbar_line {
+        @include wid-heig(95%, 1.5px);
+        background-color: black;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%); /*hace que la linea este siempre centrada*/
+    }   
+}
+

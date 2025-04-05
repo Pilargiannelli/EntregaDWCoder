@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../utilities/mixins' as *;
+@use '../base/variables' as *;
+
+/*pages About Us*/
+.img-abt1 {
+    @include tamanos('../img/about_1.jpg');
+    min-height: map.get($tamheight, height-img-abt1);
+}
+
+.img-abt2 {
+    @include tamanos('../img/about_2.jpg');
+    min-height: map.get($tamheight, height-img23-abt);
+}
+
+.img-abt3 {
+    @include tamanos('../img/about_3.jpg');
+    min-height: map.get($tamheight, height-img23-abt);
+}
+
+.text-section {
+    background-color: rgba(217, 217, 217, 0.43);
+    display: flex;
+    align-items: center;
+    position: relative;
+    h2 {
+        margin-left: 40px;
+        font-size: map.get($fontsize, font-text-about);
+        font-family: $font-family-newsreader;
+    }    
+}
+
+.linea-vertical {
+    border-left: 2px solid black;
+    min-height: 850px;
+    position: absolute;
+    left: 90%;
+}
+
+

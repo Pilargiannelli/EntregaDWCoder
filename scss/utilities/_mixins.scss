@@ -1,0 +1,26 @@
+@mixin tamanos($img){
+    background-image: url($img);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin font-mt-ml($f-size, $mgtop, $mgleft){
+    font-size: $f-size;
+    margin-top: $mgtop;
+    margin-left: $mgleft;
+}
+
+@mixin wid-heig($width, $minh){
+    width: $width;
+    min-height: $minh;
+}
+
+@mixin display($display, $aligitems, $justifyc){
+    display: $display;
+    align-items: $aligitems;
+    justify-content: $justifyc;
+}
+
+
+

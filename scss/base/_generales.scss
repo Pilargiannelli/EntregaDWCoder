@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+body {
+    background-color: $color-body;
+    margin: 0;
+    min-height: 1700px;
+    position: relative;
+}
+
+/*main vista desktop*/
+main {
+    margin-top: 110px;
+}
+
