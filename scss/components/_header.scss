@@ -18,15 +18,15 @@ header {
             color: black;
             font-weight: 400;
             margin-left: 54px;           
-            .navbar-toggler {
-                border: none;
-                box-shadow: none;
-                transition: background-color 0.7s, border-radius 0.4s; /*transicion de color y borde*/
-                outline: none;
-                &:hover {
-                    border-radius: 20px;
-                    background-color: rgba(250, 235, 215, 0.95);
-                }
+        }
+        .navbar-toggler {
+            border: none;
+            box-shadow: none;
+            transition: background-color 0.7s, border-radius 0.4s; /*transicion de color y borde*/
+            outline: none;
+            &:hover {
+                border-radius: 20px;
+                background-color: rgba(250, 235, 215, 0.95);
             }
         }
         .navbar-nav {

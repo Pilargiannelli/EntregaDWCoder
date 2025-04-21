@@ -14,12 +14,6 @@ main {
   margin-top: 110px;
 }
 
-.arq-item, .img-arq1, .contenedora-div1 .img-arq2, .contenedora-div1 .img-arq3, .img-arq4 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -39,13 +33,13 @@ header .navbar .navbar-brand {
   font-weight: 400;
   margin-left: 54px;
 }
-header .navbar .navbar-brand .navbar-toggler {
+header .navbar .navbar-toggler {
   border: none;
   box-shadow: none;
   transition: background-color 0.7s, border-radius 0.4s; /*transicion de color y borde*/
   outline: none;
 }
-header .navbar .navbar-brand .navbar-toggler:hover {
+header .navbar .navbar-toggler:hover {
   border-radius: 20px;
   background-color: rgba(250, 235, 215, 0.95);
 }
@@ -75,6 +69,12 @@ header .navbar_line {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%); /*hace que la linea este siempre centrada*/
+}
+
+.arq-item, .img-arq1, .contenedora-div1 .img-arq2, .contenedora-div1 .img-arq3, .img-arq4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .footer {
@@ -127,7 +127,7 @@ header .navbar_line {
 .imagen-index-fondo .rec-index-opacidad {
   background-color: rgba(128, 96, 68, 0.5);
   width: 690px;
-  min-height: 230px;
+  height: 230px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,13 +141,13 @@ header .navbar_line {
 }
 
 .recmarron {
-  min-height: 470px;
+  height: 470px;
   background: rgb(49, 30, 9);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.recmarron p {
+.recmarron .texto-picasso {
   text-align: center;
   color: rgba(237, 225, 210, 0.79);
   font-size: 32px;
@@ -162,13 +162,13 @@ header .navbar_line {
   display: flex;
 }
 .disenandoparavos .rec-transparente {
+  height: 300px;
   width: 95%;
-  min-height: 300px;
   display: flex;
   align-items: end;
   justify-content: end;
 }
-.disenandoparavos .rec-transparente h3 {
+.disenandoparavos .rec-transparente h2 {
   font-size: 45px;
   font-weight: 400;
   font-family: "Newsreader", serif;
@@ -181,7 +181,7 @@ header .navbar_line {
   min-height: 880px;
 }
 
-.contenedora-div1 h2 {
+.contenedora-div1 h1 {
   font-size: 26px;
   margin-bottom: 20px;
   font-family: "Inter", serif;
@@ -226,7 +226,7 @@ header .navbar_line {
 .div2 {
   font-family: "Inter", serif;
 }
-.div2 h3 {
+.div2 h2 {
   font-weight: bold;
   font-size: 38px;
 }
@@ -380,7 +380,7 @@ header .navbar_line {
   align-items: center;
   position: relative;
 }
-.text-section h2 {
+.text-section h1 {
   margin-left: 40px;
   font-size: 56px;
   font-family: "Newsreader", serif;
@@ -405,11 +405,10 @@ header .navbar_line {
   flex: 1;
 }
 .parte1 .imagenes .imag1 {
-  background-image: url("./img/contacto_1.png");
+  background-image: url("../img/contacto_1.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/contacto_1.png);
   width: 50%;
   min-height: 300px;
 }
@@ -418,7 +417,6 @@ header .navbar_line {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/contacto_2.png);
   width: 50%;
   min-height: 300px;
 }
@@ -440,7 +438,7 @@ header .navbar_line {
 .contactarnos .formulario {
   background-color: rgba(72, 39, 11, 0.96);
   padding: 20px;
-  width: 800px;
+  max-width: 800px;
   min-height: 600px;
   color: #EDE1D2;
   border-radius: 5px;
@@ -451,7 +449,7 @@ header .navbar_line {
   max-width: 320px;
   text-align: center;
 }
-.contactarnos .formulario .rec-contactanos h2 {
+.contactarnos .formulario .rec-contactanos h1 {
   font-size: 36px;
   font-family: "Aboreto", serif;
   font-weight: 400;
@@ -478,12 +476,12 @@ header .navbar_line {
 }
 
 .img-cont1 {
-  background-image: url(../img/contacto_3.png);
+  background-image: url("../img/contacto_3.png");
   min-height: 300px;
 }
 
 .img-cont2 {
-  background-image: url(../img/contacto_4.png);
+  background-image: url("../img/contacto_4.png");
   min-height: 300px;
 }
 
@@ -496,17 +494,17 @@ header .navbar_line {
   body {
     min-height: 1100px;
   }
-  .header {
+  header {
     min-height: 140px;
   }
-  .header .navbar-brand {
+  header .navbar .navbar-brand {
     font-size: 32px;
     margin-left: 16px;
   }
-  .header .navbar-nav {
-    padding: 16px;
+  header .navbar .navbar-nav {
+    padding: 10px;
   }
-  .header .navbar-nav .nav-link {
+  header .navbar .navbar-nav .nav-item .nav-link {
     font-size: 16px;
     margin-left: 16px;
   }
@@ -529,15 +527,15 @@ header .navbar_line {
     min-height: 700px;
   }
   .contactarnos .formulario {
-    width: 90%;
     min-height: 270px;
+    max-width: 90%;
   }
   .contactarnos .formulario .rec-contactanos {
     min-height: 26px;
     max-width: 160px;
     margin-bottom: 12px;
   }
-  .contactarnos .formulario .rec-contactanos h2 {
+  .contactarnos .formulario .rec-contactanos h1 {
     font-size: 16px;
   }
   .contactarnos .formulario .form-control::placeholder {
@@ -547,10 +545,6 @@ header .navbar_line {
     padding: 8px 20px;
     font-size: 10px;
   }
-  .img-cont1 {
-    background-image: url(../img/contacto_1.png);
-    width: 100%;
-  }
   .imagen-index-fondo {
     height: 600px;
     padding-top: 70px;
@@ -559,15 +553,15 @@ header .navbar_line {
   }
   .imagen-index-fondo .rec-index-opacidad {
     width: 450px;
-    min-height: 170px;
+    height: 170px;
   }
   .imagen-index-fondo .rec-index-opacidad h1 {
     font-size: 38px;
   }
   .recmarron {
-    height: 200px;
+    min-height: 200px;
   }
-  .recmarron p {
+  .recmarron .texto-picasso {
     font-size: 18px;
   }
   .disenandoparavos {
@@ -576,7 +570,7 @@ header .navbar_line {
   .disenandoparavos .rec-transparente {
     height: 200px;
   }
-  .disenandoparavos .rec-transparente h3 {
+  .disenandoparavos .rec-transparente h2 {
     font-size: 14px;
   }
   .mobileabt-section {
@@ -605,7 +599,7 @@ header .navbar_line {
     position: relative;
     padding: 20px;
   }
-  .text-section h2 {
+  .text-section h1 {
     margin-left: 40px;
     font-size: 32px;
     font-family: "Newsreader", serif;
@@ -616,7 +610,7 @@ header .navbar_line {
     position: absolute;
     left: 90%;
   }
-  .arq-item h2 {
+  .arq-item h1 {
     font-size: 26px;
   }
   .neuroarq {
@@ -625,7 +619,7 @@ header .navbar_line {
   .div2 {
     margin-bottom: 100px;
   }
-  .div2 h3 {
+  .div2 h2 {
     font-weight: bold;
     font-size: 22px;
   }
@@ -635,8 +629,8 @@ header .navbar_line {
   .button-arq {
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 10px;
+    height: 52px;
     width: 210px;
-    min-height: 52px;
   }
   .button-arq p {
     color: rgba(255, 255, 255, 0.79);
@@ -651,7 +645,7 @@ header .navbar_line {
   .recg-marron {
     min-height: 52px;
   }
-  .recpmarron {
+  .recp-marron {
     min-height: 45px;
   }
   .categoriag {
@@ -676,7 +670,21 @@ header .navbar_line {
   }
 }
 @media (max-width: 576px) {
-  .footer-title {
+  header {
+    min-height: 140px;
+  }
+  header .navbar .navbar-brand {
+    font-size: 26px;
+    margin-left: 12px;
+  }
+  header .navbar-nav {
+    padding: 16px;
+  }
+  header .navbar-nav .nav-link {
+    font-size: 10px;
+    margin-left: 16px;
+  }
+  .footer .footer-title {
     font-size: 16px;
   }
   .icon-textmail {
@@ -686,7 +694,7 @@ header .navbar_line {
     font-size: 10px;
   }
   .fa-brands {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 

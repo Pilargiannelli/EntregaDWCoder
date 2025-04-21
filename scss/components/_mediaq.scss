@@ -10,17 +10,21 @@
         min-height: $heightbody-mobile;
     }
 
-    .header {
+    header {
         min-height: $mheight-header;
-        .navbar-brand {
-            font-size: map.get($fontsizemobile, fs-navbar-brand);
-            margin-left: 16px;
-        }
-        .navbar-nav {
-            padding: 16px;
-            .nav-link {
-                font-size: map.get($fontsizemobile, fs-nav-link);
+        .navbar {
+            .navbar-brand {
+                font-size: map.get($fontsizemobile, fs-navbar-brand);
                 margin-left: 16px;
+            }
+            .navbar-nav {
+                padding: 10px;
+                .nav-item {
+                    .nav-link {
+                        font-size: map.get($fontsizemobile, fs-nav-link);
+                        margin-left: 16px;
+                    }
+                }
             }
         }
     }
@@ -48,12 +52,13 @@
     .contactarnos {
         min-height: $mheight-contactarnos-mobile;
         .formulario {
-            @include wid-heig(90%, 270px);
+            min-height: 270px;
+            max-width: 90%;
             .rec-contactanos {
                 min-height: 26px;
                 max-width: 160px;
                 margin-bottom: 12px;
-                h2 {
+                h1 {
                     font-size: map.get($fontsizemobile, fs-conth2);
                 }
             }
@@ -69,19 +74,14 @@
         }
     }
 
-    .img-cont1{
-        background-image: url(../img/contacto_1.png);
-        width: 100%;
-    }
-    
-
     .imagen-index-fondo {
         height: 600px;
         padding-top: 70px;
         align-items: start;
         justify-content: center;
         .rec-index-opacidad {
-            @include wid-heig(450px, 170px);
+            width: 450px;
+            height: 170px;
             h1 {
                 font-size: map.get($fontsizemobile, fs-indexh1);
             }
@@ -89,8 +89,8 @@
     }
 
     .recmarron {
-        height: 200px;
-        p {
+        min-height: 200px;
+        .texto-picasso {
             font-size: map.get($fontsizemobile, fs-indexmarron);
         }
     }
@@ -99,7 +99,7 @@
         min-height: 260px;
         .rec-transparente {
             height: 200px;
-            h3 {
+            h2 {
                 font-size: map.get($fontsizemobile, fs-indexh3);
             }
         }
@@ -133,7 +133,7 @@
         align-items: center;
         position: relative;
         padding: 20px;
-        h2 {
+        h1 {
             margin-left: 40px;
             font-size: map.get($fontsizemobile, fs-abth2);
             font-family: $font-family-newsreader;
@@ -148,7 +148,7 @@
     }
 
     .arq-item {
-        h2 {
+        h1 {
             font-size: map.get($fontsizemobile, fs-arqitemh2);
         }
     }
@@ -159,7 +159,7 @@
 
     .div2 {
         margin-bottom: 100px;
-        h3 {
+        h2 {
             font-weight: bold;
             font-size: map.get($fontsizemobile, fs-arqh3);
         }
@@ -172,7 +172,8 @@
     .button-arq {
         background-color: rgba(0, 0, 0, 0.53);
         border-radius: 10px;
-        @include wid-heig(210px, 52px);
+        height: 52px;
+        width: 210px;
         p {
             color: $color-letra-lif;
             font-size: map.get($fontsizemobile, fs-arqbuttonp);
@@ -203,10 +204,27 @@
 }
 
 @media (max-width: 576px) {
-    .footer-title {
-        font-size: map.get($fontsizemobile, fs-mini-foottitle);
+    header {
+        min-height: $mheight-header;
+        .navbar {
+            .navbar-brand {
+                font-size: map.get($fontsizemobile, fs-navbar-mini-brand);
+                margin-left: 12px;
+            }
+        }
+        .navbar-nav {
+            padding: 16px;
+            .nav-link {
+                font-size: map.get($fontsizemobile, fs-nav-mini-link);
+                margin-left: 16px;
+            }
+        }
     }
-
+    .footer {
+        .footer-title {
+            font-size: map.get($fontsizemobile, fs-mini-foottitle);
+        }
+    }
     .icon-textmail {
         display: none;
     }

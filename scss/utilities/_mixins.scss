@@ -5,6 +5,10 @@
     background-repeat: no-repeat;
 }
 
+@mixin img($img){
+    background-image: url($img);
+}
+
 @mixin font-mt-ml($f-size, $mgtop, $mgleft){
     font-size: $f-size;
     margin-top: $mgtop;

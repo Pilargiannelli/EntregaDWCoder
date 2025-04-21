@@ -12,7 +12,7 @@
 }
 
 .contenedora-div1 {
-    h2 {
+    h1 {
         font-size: map.get($fontsize, font-h2neuro-arq);
         margin-bottom: 20px;
         font-family: $font-family-inter;
@@ -63,7 +63,7 @@
 
 .div2 {
     font-family: $font-family-inter;
-    h3 {
+    h2 {
         font-weight: bold;
         font-size: map.get($fontsize, font-h3-arq);
     }

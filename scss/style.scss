@@ -1,7 +1,6 @@
 @use './base/generales';
 @use './base/variables';
 @use './utilities/maps';
-@use './utilities/extend';
 @use './utilities/mixins';
 
 @use './components/header';
@@ -12,5 +11,6 @@
 @use './pages/lifestyle';
 @use './pages/about';
 @use './pages/contacto';
+@use './utilities/extend';
 
 @use './components/mediaq';

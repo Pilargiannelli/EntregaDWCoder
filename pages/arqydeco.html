@@ -6,8 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ever Magazine | Arq&Deco</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <meta name="description" content="Revista Web de diseño interior y exterior, arquitectura e inspiraciones">
+    <meta name="description" content="Sección de arquitectura y diseño de interiores, información sobre las últimas tendencias en arquitectura y calidad de vida">
+    <meta name="author" content="The Ever Magazine">
+    <meta name="keywords" content="playa, arquitectura, decoración, calidad de vida, tendencias, revista digital, neuroarquitectura, hogar, inspiración">
+    <meta name="robots" content="index, follow">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -15,8 +20,8 @@
 </head>
 
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg"> <!-- aparece el menu hamburguesa en tamanios <=992px -->
+        <header role="banner" aria-label="Encabezado principal del sitio">
+            <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Menú de navegación principal"> <!-- aparece el menu hamburguesa en tamanios <=992px -->
                 <div class="container-fluid"> 
                     <a class="navbar-brand" href="#">The Ever Magazine</a> <!-- titulo de la pagina -->
                     <button 
@@ -34,21 +39,20 @@
                     <div class="collapse navbar-collapse" id="contenidoMenu">
                         <!-- enlaces-->
                         <ul class="navbar-nav ms-auto gap-3">
-                            <li class="nav-item"><a class="nav-link" href="../index.html" aria-label="enlace que redirige a la página principal"> Home </a></li>
-                            <li class="nav-item"><a class="nav-link" href="arqydeco.html" aria-label="enlace que redirige a la página de arquitectura y diseño">  <strong> Arq&Deco </strong> </a></li>
-                            <li class="nav-item"><a class="nav-link" href="lifestyle.html" aria-label="enlace que redirige a la página de tendencias e inspiraciones"> LifeStyle </a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html" aria-label="enlace que redirige a la página que cuenta sobre nosotros"> About Us </a> </li>
-                            <li class="nav-item"><a class="nav-link" href="contacto.html" aria-label="enlace que redirige al formulario de contacto"> Contacto </a> </li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html" aria-label="Página principal"> Home </a></li>
+                            <li class="nav-item"><a class="nav-link" href="arqydeco.html" aria-label="Sección de arquitectura y decoración"> <strong> Arq&Deco </strong> </a></li>
+                            <li class="nav-item"><a class="nav-link" href="lifestyle.html" aria-label="Sección de tendencias e inspiraciones"> LifeStyle </a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html" aria-label="Sección que cuenta sobre nosotros"> About Us </a> </li>
+                            <li class="nav-item"><a class="nav-link" href="contacto.html" aria-label="Formulario de contacto"> Contacto </a> </li>
                         </ul> 
                     </div> 
                 </div>
                 <div class="navbar_line"></div> <!-- linea debajo de header --> 
             </nav> 
         </header>
-        
 
 
-        <main>
+        <main class="main" role="main" aria-label="Contenido principal del sitio">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
@@ -57,10 +61,10 @@
 
                     <div class="col-lg-6">
                         <div class="contenedora-div1">
-                            <div class="arq-item d-flex">
-                                <h2>Neuroarquitectura: <br> diseñando espacios 
+                            <div class="arq-item d-flex" aria-label="Conociendo la Neuroarquitectura">
+                                <h1>Neuroarquitectura: <br> diseñando espacios 
                                     <br> que mejoran el <br>bienestar
-                                </h2>
+                                </h1>
                             </div>
 
                             <div class="arq-item d-flex align-items-end">
@@ -78,15 +82,15 @@
                 </div>
 
                 <div class="row mt-5">    
-                        <div class="col-lg-6 col-12 d-lg-flex justify-content-lg-end">
+                        <div class="col-lg-6 col-12">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="img-arq4 d-flex align-items-end justify-content-center p-3"> <button class="button-arq " type="button"><p>Ver más</p></button></div>
                             </div>
                         </div>
     
-                        <div class="col-lg-6 col-12 d-lg-flex justify-content-lg-start">
-                            <div class="div2 d-flex flex-column align-items-center">
-                                <h3>Una casa llena de calidez, estilo y <br> en la playa</h3>
+                        <div class="col-lg-6 col-12">
+                            <div class="div2 d-flex flex-column align-items-center" aria-label="Casa en la playa, te invitamos a recorrer un estilo de vida diferente">
+                                <h2>Una casa llena de calidez, estilo y <br> en la playa</h2>
                                 <p>Te invitamos a recorrer esta maravillosa casa <br> 
                                     en el barrio Santa Teresa, donde cada detalle 
                                     <br> fue pensado para disfrutar al máximo.
@@ -98,14 +102,13 @@
         </main>
 
 
-        <footer class="footer text-center text-lg-start">
+        <footer class="footer text-center text-lg-start" role="contentinfo" aria-label="Pie de página con información de contacto y redes">
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-between flex-nowrap text-center text-lg-start">
                     <!-- seccion iquierda -->
-
                     <div class="col-auto d-flex align-items-center gap-3 order-3 order-lg-1">
-                        <a href="http://gmail.com" class="icon-mail"> <i class="fa-regular fa-envelope fa-2xl"></i></a>
-                        <a href="mailto:theevermagazine@gmail.com" class="icon-textmail">Theevermag@gmail.com</a>
+                        <a href="http://gmail.com" target="_blank" class="icon-mail"> <i class="fa-regular fa-envelope fa-2xl"></i></a>
+                        <a href="mailto:theevermagazine@gmail.com" target="_blank" class="icon-textmail">Theevermag@gmail.com</a>
                     </div>
                     
                     <!-- centro footer -->
@@ -115,9 +118,9 @@
                     
                     <!-- seccion derecha -->
                     <div class="col-auto d-flex align-items-center gap-4 order-3 order-lg-3">
-                        <a href="http://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
-                        <a href="http://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest fa-2xl"></i></a>
-                        <a href="http://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a> 
+                        <a href="http://tiktok.com" target="_blank" aria-label="Perfil de TikTok"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
+                        <a href="http://pinterest.com" target="_blank" aria-label="Perfil de Pinterest"><i class="fa-brands fa-pinterest fa-2xl"></i></a>
+                        <a href="http://instagram.com" target="_blank" aria-label="Perfil de Instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a> 
                     </div>
                 </div>
             </div>

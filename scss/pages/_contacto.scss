@@ -12,13 +12,11 @@
         display: flex;
         flex: 1;
         .imag1 {
-            @include tamanos('./img/contacto_1.png');
-            background-image: url(../img/contacto_1.png);
+            @include tamanos('../img/contacto_1.png');
             @include wid-heig(50%, 300px);
         }
         .imag2 {
             @include tamanos('../img/contacto_2.png');
-            background-image: url(../img/contacto_2.png);
             @include wid-heig(50%, 300px);
         }
     }
@@ -37,7 +35,8 @@
     .formulario {
         background-color: rgba(72, 39, 11, 0.96);
         padding: 20px;
-        @include wid-heig(800px, 600px);
+        max-width: 800px;
+        min-height: 600px;
         color: #EDE1D2;
         border-radius: 5px;
 
@@ -46,7 +45,7 @@
             min-height: map.get($tamheight, height-rec-contactarnos);
             max-width: 320px;
             text-align: center;
-            h2 {
+            h1 {
                 font-size: map.get($fontsize, font-h2-cont);
                 font-family: $font-family-aboreto;
                 font-weight: 400;
@@ -78,12 +77,12 @@
 }
 
 .img-cont1 {
-    background-image: url(../img/contacto_3.png);
+    @include img('../img/contacto_3.png');
     min-height: map.get($tamheight, height-img-finales);
 }
 
 .img-cont2 {
-    background-image: url(../img/contacto_4.png);
+    @include img('../img/contacto_4.png');
     min-height: map.get($tamheight, height-img-finales);
 }
 
