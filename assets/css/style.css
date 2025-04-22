@@ -71,14 +71,55 @@ header .navbar_line {
   transform: translateX(-50%); /*hace que la linea este siempre centrada*/
 }
 
-.arq-item, .img-arq1, .contenedora-div1 .img-arq2, .contenedora-div1 .img-arq3, .img-arq4 {
+.arq-item, .contenedora-div1 .img-arq2, .contenedora-div1 .img-arq3, .img-arq4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+.img-espacios,
+.img-muebles,
+.img-cocina,
+.img-color,
+.img-verde,
+.img-exterior,
+.img-aqua,
+.img-descanso {
+  overflow: hidden;
+  position: relative;
+}
+.img-espacios::after,
+.img-muebles::after,
+.img-cocina::after,
+.img-color::after,
+.img-verde::after,
+.img-exterior::after,
+.img-aqua::after,
+.img-descanso::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+.img-espacios:hover::after,
+.img-muebles:hover::after,
+.img-cocina:hover::after,
+.img-color:hover::after,
+.img-verde:hover::after,
+.img-exterior:hover::after,
+.img-aqua:hover::after,
+.img-descanso:hover::after {
+  opacity: 0.5;
+}
+
 .footer {
-  background-color: #031E00;
+  background-color: rgb(40, 41, 24);
   width: 100%;
   min-height: 110px;
   bottom: 0;
@@ -125,7 +166,7 @@ header .navbar_line {
   justify-content: center;
 }
 .imagen-index-fondo .rec-index-opacidad {
-  background-color: rgba(128, 96, 68, 0.5);
+  background-color: rgba(45, 23, 6, 0.55);
   width: 690px;
   height: 230px;
   display: flex;
@@ -133,7 +174,7 @@ header .navbar_line {
   justify-content: center;
 }
 .imagen-index-fondo .rec-index-opacidad h1 {
-  color: rgba(255, 255, 255, 0.79);
+  color: rgb(255, 248, 243);
   font-size: 60px;
   text-align: center;
   font-family: "Newsreader", serif;
@@ -172,15 +213,10 @@ header .navbar_line {
   font-size: 45px;
   font-weight: 400;
   font-family: "Newsreader", serif;
+  color: rgb(255, 248, 243);
 }
 
 /*pages Arq&Deco*/
-.img-arq1 {
-  background-image: url(../img/arqdeco_1.jpg);
-  width: 100%;
-  min-height: 880px;
-}
-
 .contenedora-div1 h1 {
   font-size: 26px;
   margin-bottom: 20px;
@@ -313,7 +349,7 @@ header .navbar_line {
   width: 100%;
   min-height: 145px;
   background-color: rgba(72, 39, 11, 0.6);
-  color: rgba(255, 255, 255, 0.79);
+  color: rgb(255, 255, 255);
 }
 
 .recp-marron {
@@ -322,7 +358,7 @@ header .navbar_line {
   width: 100%;
   min-height: 85px;
   background-color: rgba(72, 39, 11, 0.6);
-  color: rgba(255, 255, 255, 0.79);
+  color: rgb(255, 255, 255);
 }
 
 .categoriag {
@@ -444,7 +480,7 @@ header .navbar_line {
   border-radius: 5px;
 }
 .contactarnos .formulario .rec-contactanos {
-  background-color: rgba(131, 106, 85, 0.88);
+  background-color: rgba(100, 73, 52, 0.85);
   min-height: 50px;
   max-width: 320px;
   text-align: center;
@@ -454,6 +490,7 @@ header .navbar_line {
   font-family: "Aboreto", serif;
   font-weight: 400;
   font-style: normal;
+  color: rgba(246, 240, 226, 0.8);
 }
 .contactarnos .formulario .form-control {
   background-color: rgba(72, 39, 11, 0.96);
@@ -472,7 +509,7 @@ header .navbar_line {
   background-color: rgb(217, 217, 217);
   font-family: "Inter", serif;
   font-size: 22px;
-  color: #031E00;
+  color: rgb(40, 41, 24);
 }
 
 .img-cont1 {
@@ -633,7 +670,7 @@ header .navbar_line {
     width: 210px;
   }
   .button-arq p {
-    color: rgba(255, 255, 255, 0.79);
+    color: rgb(255, 255, 255);
     font-size: 18px;
   }
   .imgchica {
@@ -683,6 +720,9 @@ header .navbar_line {
   header .navbar-nav .nav-link {
     font-size: 10px;
     margin-left: 16px;
+  }
+  .imagen-index-fondo .rec-index-opacidad h1 {
+    font-size: 34px;
   }
   .footer .footer-title {
     font-size: 16px;

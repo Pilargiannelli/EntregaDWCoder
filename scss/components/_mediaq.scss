@@ -220,6 +220,13 @@
             }
         }
     }
+    .imagen-index-fondo {
+        .rec-index-opacidad {
+            h1 {
+                font-size: 34px;
+            }
+        }
+    }
     .footer {
         .footer-title {
             font-size: map.get($fontsizemobile, fs-mini-foottitle);

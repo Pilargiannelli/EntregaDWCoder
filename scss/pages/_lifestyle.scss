@@ -67,6 +67,17 @@
     color: $color-letra-lif;
 }
 
+.img-espacios,
+.img-muebles,
+.img-cocina,
+.img-color,
+.img-verde,
+.img-exterior,
+.img-aqua,
+.img-descanso {
+    @extend %hover-blanco-transparente;
+}
+
 .categoriag {
     @include font-mt-ml(24px, 30px, 30px);
 }

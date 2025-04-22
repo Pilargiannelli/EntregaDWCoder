@@ -5,12 +5,6 @@
 @use '../base/variables' as *;
 
 /*pages Arq&Deco*/
-.img-arq1 {
-    background-image: url(../img/arqdeco_1.jpg);
-    @include wid-heig(100%, 880px);
-    @extend.arq-item;
-}
-
 .contenedora-div1 {
     h1 {
         font-size: map.get($fontsize, font-h2neuro-arq);

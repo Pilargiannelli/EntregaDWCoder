@@ -41,7 +41,7 @@
         border-radius: 5px;
 
         .rec-contactanos {
-            background-color: rgba(131, 106, 85, 0.88);
+            background-color: rgba(100, 73, 52, 0.85);
             min-height: map.get($tamheight, height-rec-contactarnos);
             max-width: 320px;
             text-align: center;
@@ -50,6 +50,7 @@
                 font-family: $font-family-aboreto;
                 font-weight: 400;
                 font-style: normal;
+                color: rgba(246, 240, 226, 0.8);
             }
         }
 

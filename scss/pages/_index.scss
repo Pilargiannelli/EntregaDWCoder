@@ -10,12 +10,12 @@
 
 
     .rec-index-opacidad {
-        background-color: rgba(128, 96, 68, 0.5);
+        background-color: rgba(45, 23, 6, 0.55);
         width: 690px;
         height: 230px;
         @include display(flex, center, center);
         h1 {
-            color: rgba(255, 255, 255, 0.79);
+            color: rgba(255, 248, 243, 1);
             font-size: map.get($fontsize, font-h1-index);
             text-align: center;
             font-family: $font-family-newsreader;
@@ -48,6 +48,7 @@
             font-size: map.get($fontsize, font-h3-index);
             font-weight: 400;
             font-family: $font-family-newsreader;
+            color: rgba(255, 248, 243, 1);
         }
     }
     
